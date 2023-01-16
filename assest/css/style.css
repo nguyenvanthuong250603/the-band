@@ -1,0 +1,158 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: Arial, Helvetica, sans-serif;
+}
+#conten .clear {
+}
+#header {
+  height: 46px;
+  background-color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+#nav li {
+  display: block;
+  position: relative;
+}
+#nav > li > a {
+  /* tất cả thẻ a cấp 1  */
+  color: #fff;
+  text-transform: uppercase;
+  /* vieets hoa all cap 1 */
+}
+#nav {
+  display: inline-block;
+}
+#nav,
+.subnav {
+  list-style-type: none;
+}
+#nav li a {
+  text-decoration: none;
+  line-height: 46px;
+  padding: 0px 24px;
+  display: inline-block;
+}
+#nav > li {
+  display: inline-block;
+}
+#nav .subnav li:hover,
+/* tất cả thẻ a  cấp 2  */
+#nav > li:hover > a {
+  color: black;
+  background-color: #ccc;
+}
+#nav .subnav a {
+  padding: 0 16px;
+}
+#nav li:hover .subnav {
+  display: block;
+  min-width: 160px;
+}
+#nav .subnav {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+#nav .subnav a {
+  color: #000;
+}
+
+#header .search-icon {
+  color: #fff;
+  font-size: 20px;
+
+  line-height: 46px;
+  padding: 0px 21px;
+}
+#header .search-icon:hover {
+  background-color: #f44336 !important;
+  display: inline-block;
+  cursor: pointer;
+  /* cứ cái gì nhấn vô được thì phải hiện hình bàn tay cursor là thuộc tính giúp làm hiện bàn tay */
+}
+#header .search-btn {
+  float: right;
+}
+#slider {
+  position: relative;
+  margin-top: 46px;
+  padding-top: 50%;
+  /* kích thuơcs của chiều cao bằng 50% chiều rộng */
+  background: url(/assest/img/newyord.jpg) top center/cover no-repeat;
+}
+#slider .text-content {
+  position: absolute;
+  bottom: 47px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: #ccc;
+}
+#slider .text-heading {
+  font-size: 25px;
+  font-weight: 500;
+}
+#slider .text-d {
+  font-size: 15px;
+  margin-top: 25px;
+}
+#conten {
+}
+#conten .conten1 {
+  width: 800px;
+  padding: 64px 0px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#conten .conten2,
+#conten .conten3 {
+  text-align: center;
+  /* can giua */
+}
+
+#conten .conten2 {
+  font-size: 30px;
+  font-weight: 500;
+  /* làm mỏng chữ đi  */
+  letter-spacing: 4px;
+  /* tăng khoảng cách giữa các chữ */
+}
+#conten .conten3 {
+  font-size: 15px;
+  font-style: italic;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  /* color: #ccc; */
+  opacity: 0.5;
+  /* làm mờ chữ đi chạy từ khoảng 0-1 */
+}
+#conten .conten4 {
+  text-align: justify;
+  margin-top: 25px;
+  line-height: 1.5;
+}
+/* phan anh */
+#content .anh {
+  margin-top: 46px;
+}
+#conten .panh1 {
+  float: left;
+  width: 33.33333%;
+  /*or (width(100%/3)) căn cho 3 cái ảnh thẳng mép 2 bên phải và trái văn bản */
+  text-align: center;
+}
+#conten .name1 {
+  margin: 15px 0;
+}
+#conten .anh1 {
+  width: 154px;
+}
