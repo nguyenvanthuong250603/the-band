@@ -4,6 +4,7 @@
   box-sizing: border-box;
 }
 html {
+  scroll-behavior: smooth;
   font-family: Arial, Helvetica, sans-serif;
 }
 #conten .clear {
@@ -33,6 +34,7 @@ html {
 #nav,
 .subnav {
   list-style-type: none;
+  /* bỏ dấu của thẻ ul li */
 }
 #nav li a {
   text-decoration: none;
@@ -84,10 +86,13 @@ html {
 }
 #slider {
   position: relative;
-  margin-top: 46px;
-  padding-top: 50%;
   /* kích thuơcs của chiều cao bằng 50% chiều rộng */
-  background: url(/assest/img/newyord.jpg) top center/cover no-repeat;
+}
+#slider img {
+  width: 100%;
+}
+#slider .sliderimg {
+  position: relative;
 }
 #slider .text-content {
   position: absolute;
@@ -105,8 +110,7 @@ html {
   font-size: 15px;
   margin-top: 25px;
 }
-#conten {
-}
+
 #conten .conten1 {
   width: 800px;
   padding: 64px 0px;
@@ -141,18 +145,164 @@ html {
   line-height: 1.5;
 }
 /* phan anh */
-#content .anh {
+#conten .anh {
   margin-top: 46px;
+  overflow: hidden;
+  /* khắc phục chữ tour dính với ảnh */
 }
 #conten .panh1 {
   float: left;
   width: 33.33333%;
   /*or (width(100%/3)) căn cho 3 cái ảnh thẳng mép 2 bên phải và trái văn bản */
   text-align: center;
+  padding: 32px 0;
 }
 #conten .name1 {
   margin: 15px 0;
 }
 #conten .anh1 {
   width: 154px;
+  border-radius: 4px;
+  /* giúp cua hình các góc thành tròn  */
+  margin-bottom: 15px;
+}
+#conten .tour {
+  background-color: #000;
+}
+#conten .tour .conten1 {
+  color: white;
+}
+#conten .tour .tick {
+  list-style: none;
+}
+/* mặc định màu chữ của thẻ a là màu tím cần lệnh text-decoration: none bỏ đi màu đi */
+#conten .tour .tick a {
+  background-color: #fff;
+  color: #0c0202;
+  text-decoration: none;
+  /* xóa gạch chan dưới chữ */
+  display: block;
+  /* giúp cho dòng đó ăn hết width */
+  border-bottom: 1px solid #ddd;
+  /* gạch ngăn cách giữa các dòng */
+  padding: 8px 16px;
+}
+#conten .tour .sold {
+  background-color: red;
+  color: #fff;
+  padding: 4px;
+  margin-left: 16px;
+}
+#conten .tour .number3 {
+  background-color: #000;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  color: #fff;
+  margin-right: 16px;
+  float: right;
+  /* chuyển nó nối liền sang bên phải */
+  font-size: 15px;
+  text-align: center;
+  line-height: 24px;
+  margin-top: -2px;
+  /* có float mới dùng - đc */
+}
+#conten .boss {
+  padding: 32px 0px;
+  display: flex;
+
+  margin-left: -8px;
+}
+#conten .sir {
+  padding: 8px;
+  width: calc(100% / 3);
+  overflow: hidden;
+}
+#conten .thembody {
+  background-color: #fff;
+  font-family: "lato", sans-serif;
+  padding: 16px;
+}
+#conten .tour .cardimg:hover {
+  opacity: 0.6;
+}
+#conten .tour .cardimg {
+  width: 100%;
+  display: block;
+  transition: 0.3s;
+}
+#conten .xam {
+  font-size: 15px;
+  color: #000;
+}
+#conten .date {
+  padding: 15px 0;
+  opacity: 0.6;
+  color: #0c0202;
+}
+#conten .van {
+  color: #000;
+  margin: 15px 0;
+}
+#conten .nut {
+  background-color: #000;
+  color: #fff;
+  padding: 8px 16px;
+  border: 0;
+  /*bỏ đường viền của thẻ button */
+}
+#conten .nut:hover {
+  color: #000;
+  background-color: #ddd;
+  cursor: pointer;
+}
+#conten .bottomhive {
+  display: flex;
+  gap: 10px;
+  /* khoảng cách giữa các dòng khi cho chung lên 1 dòng */
+  padding: 4px 0;
+}
+#conten .bottomtour {
+  display: flex;
+  justify-content: space-between;
+}
+#conten input {
+  padding: 8px;
+  border: 1;
+}
+#conten .name {
+  margin-right: 16px;
+}
+#conten .nhapmess {
+  width: 100%;
+  margin-top: 8px;
+}
+#conten .khoi2 {
+  margin-right: 16px;
+}
+
+#conten .send {
+  padding: 8px 16px;
+  margin: 16px 0;
+  float: right;
+  background-color: #000;
+  color: #ccc;
+  border: 0;
+  cursor: pointer;
+}
+#conten .send:hover {
+  background-color: #ddd;
+  color: #000;
+}
+#conten .anhcuoichan {
+  width: 100%;
+  filter: grayscale(60%);
+}
+#footer {
+  text-align: center;
+  padding: 64px 16px;
+}
+#footer .powed {
+  padding-top: 24px;
 }
